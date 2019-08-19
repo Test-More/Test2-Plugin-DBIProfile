@@ -2,7 +2,7 @@ package Test2::Plugin::DBIProfile;
 use strict;
 use warnings;
 
-our $VERSION = '0.002002';
+our $VERSION = '0.002003';
 
 use DBI::Profile qw/dbi_profile_merge_nodes/;
 use Test2::API qw/test2_add_callback_exit/;
