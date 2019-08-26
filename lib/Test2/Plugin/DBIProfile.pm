@@ -37,7 +37,6 @@ sub send_profile_event {
     my ($summary) = $p->format;
 
     my @totals;
-    use Data::Dumper;
     dbi_profile_merge_nodes(\@totals, $data);
     my ($count, $time) = @totals;
 
