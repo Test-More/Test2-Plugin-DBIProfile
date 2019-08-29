@@ -19,7 +19,8 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "DBI::Profile" => 0,
     "Test2::API" => "1.302165",
-    "Test2::Event::V2" => "1.302165"
+    "Test2::Event::V2" => "1.302165",
+    "Test2::Util::Times" => "0.000126"
   },
   "TEST_REQUIRES" => {
     "DBD::SQLite" => "1.44",
@@ -37,6 +38,7 @@ my %FallbackPrereqs = (
   "DBI::Profile" => 0,
   "Test2::API" => "1.302165",
   "Test2::Event::V2" => "1.302165",
+  "Test2::Util::Times" => "0.000126",
   "Test2::V0" => "0.000124"
 );
 
