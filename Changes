@@ -1,6 +1,7 @@
 {{$NEXT}}
 
     - Remove unnecessary Data::Dumper require
+    - Prettify the output
 
 0.002002  2019-08-19 10:51:55-07:00 America/Los_Angeles
 
