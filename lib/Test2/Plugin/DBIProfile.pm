@@ -26,7 +26,16 @@ sub import {
     $DBI::Profile::ON_DESTROY_DUMP = undef;
     $DBI::Profile::ON_FLUSH_DUMP   = undef;
 
-    test2_add_callback_exit(\&send_profile_event);
+    my $ran = 0;
+    my $callback = sub {
+        return if $ran++;
+        send_profile_event(@_);
+    };
+
+    test2_add_callback_exit($callback);
+
+    # Fallback
+    eval 'END { local $?; $callback->() }; 1' or die $@;
 }
 
 sub send_profile_event {
