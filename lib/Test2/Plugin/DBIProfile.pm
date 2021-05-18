@@ -5,7 +5,7 @@ use warnings;
 our $VERSION = '0.002005';
 
 use DBI::Profile qw/dbi_profile_merge_nodes/;
-use Test2::API qw/test2_add_callback_exit/;
+use Test2::API qw/test2_add_callback_exit context/;
 use Test2::Util::Times qw/render_duration/;
 
 my $ADDED_HOOK = 0;
@@ -40,6 +40,8 @@ sub import {
 
 sub send_profile_event {
     my ($ctx, $real, $new) = @_;
+
+    $ctx //= context();
 
     my $p = $DBI::shared_profile or return;
 
