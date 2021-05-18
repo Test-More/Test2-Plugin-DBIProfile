@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     "DBD::SQLite" => "1.44",
     "Test2::V0" => "0.000124"
   },
-  "VERSION" => "0.002004",
+  "VERSION" => "0.002005",
   "test" => {
     "TESTS" => "t/*.t"
   }
